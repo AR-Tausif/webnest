@@ -12,7 +12,7 @@ const Featured = () => {
                     <div className="space-y-10">
                         <h3 className='text-5xl font-semibold'>Learner outcomes on Coursera
                         </h3>
-                        <p className='w-2/4 text-lg'> <b> 87% of people learning </b> for professional development <b> report career benefits, </b> including outcomes like getting a promotion, becoming better at their current job, and finding a new job. Coursera Impact Report (2020)
+                        <p className='w-3/4 text-lg'> <b> 87% of people learning </b> for professional development <b> report career benefits, </b> including outcomes like getting a promotion, becoming better at their current job, and finding a new job. Coursera Impact Report (2020)
                         </p>
                         <Button color='primary'>Join with free</Button>
                     </div>

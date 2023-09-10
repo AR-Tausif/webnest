@@ -21,7 +21,7 @@ module.exports = {
   darkMode: "class",
   plugins: [
     nextui({
-      defaultTheme: "light", // default theme from the themes object
+      defaultTheme: "dark", // default theme from the themes object
     }),
   ],
 };

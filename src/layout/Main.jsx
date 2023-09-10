@@ -1,15 +1,19 @@
 
-import React from 'react';
 import { Outlet } from 'react-router-dom';
 import NavigationBar from '../components/navbar/Navbar';
 import Footer from '../components/footer/Footer';
+import { useState } from 'react';
 
 const Main = () => {
+    const [theme, setTheme] = useState(false)
+
     return (
         <>
-            <NavigationBar />
-            <Outlet />
-            <Footer />
+            <div className={`${theme && "dark"}`}>
+                <NavigationBar theme={theme} setTheme={setTheme} />
+                <Outlet />
+                <Footer />
+            </div>
         </>
     );
 };

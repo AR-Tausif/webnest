@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 import { AcmeLogo } from "./AcmeLogo.jsx";
 
-export default function NavigationBar() {
+export default function NavigationBar({ theme, setTheme }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const menuItems = [
@@ -18,8 +18,10 @@ export default function NavigationBar() {
         "Log Out",
     ];
 
+
+
     return (
-        <Navbar maxWidth="xl" position="sticky" className="bg-transparent" onMenuOpenChange={setIsMenuOpen}>
+        <Navbar maxWidth="xl" position="sticky" className="bg-transparent shadow-lg" onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent className="">
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -27,11 +29,11 @@ export default function NavigationBar() {
                 />
                 <NavbarBrand>
                     <AcmeLogo />
-                    <p className="font-bold text-inherit">ACME</p>
+                    <p className="font-bold text-inherit text-lg text-secondary">WEB NEST</p>
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="sm:hidden lg:flex gap-4" justify="center">
+            <NavbarContent className="hidden lg:flex gap-4" justify="center">
                 <NavbarItem>
                     <Link color="foreground" href="#">
                         Features
@@ -49,11 +51,16 @@ export default function NavigationBar() {
                 </NavbarItem>
             </NavbarContent>
             <NavbarContent justify="end">
+                <NavbarItem>
+                    <button onClick={() => setTheme(!theme)} className="py-4 flex justify-center items-center border  bg-gray-300 rounded-full w-10 h-10 text-center font-bold">
+                        <div className="text-7xl bg-secondary w-5 h-5 rounded-full"></div>
+                    </button>
+                </NavbarItem>
                 <NavbarItem className="hidden lg:flex">
                     <Link href="#">Login</Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Button as={Link} color="primary" href="#" variant="flat">
+                    <Button as={Link} color="secondary" href="#">
                         Sign Up
                     </Button>
                 </NavbarItem>

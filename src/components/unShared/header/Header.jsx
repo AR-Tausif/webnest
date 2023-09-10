@@ -1,20 +1,30 @@
 import Container from "../../../Container";
+import CodeWrite from "./CodeWrite";
 
 
 
 const Header = () => {
+    const section = "relative text-gray-600 body-font overflow-hidden"
+    const bgImage = "bg-[url('https://codewithmosh.com/_next/static/media/bg-grid-lighter.4c1e8196.svg')] text-gray-600 body-font absolute -top-10 lg:-top-28 left-32 lg:left-72 md:left-72 z-auto w-5/6 h-full"
+    const tailwindClassNames = {
+        section,
+        bgImage,
+    }
     return (
         <div>
 
-            <section className=" relative text-gray-600 body-font">
-                <div className="bg-[url('https://codewithmosh.com/_next/static/media/bg-grid-lighter.4c1e8196.svg')] text-gray-600 body-font absolute -top-28 left-72 z-auto w-5/6 h-full"></div>
+            <section className={tailwindClassNames.section}>
+                <div className={bgImage}></div>
 
                 {/* <img alt="background"  width="1572" height="795" decoding="async" data-nimg="1" className="absolute -top-28 -z-10" style={{ color: "transparent" }} src="https://codewithmosh.com/_next/static/media/bg-grid-lighter.4c1e8196.svg" /> */}
                 <Container>
                     <div className="flex px-5 py-24 md:flex-row flex-col items-center">
-                        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                            <h1 className="title-font sm:text-4xl lg:text-5xl mb-4 font-medium text-gray-900">Hello There!</h1>
-                            <p className="mb-8 font-bold text-[4rem] leading-tight">Become the <span className="text-green-400">software engineer</span> that companies <span className="text-red-500">love to hire</span> .</p>
+                        <div className="lg:flex-grow md:w-2/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                            <h1 className="title-font sm:text-4xl lg:text-5xl mb-4 font-medium text-gray-900 dark:text-purple-700">Hello There!</h1>
+                            <p
+                                className="mb-8 font-bold text-[2.5rem] lg:text-[4rem] md:text-[3.5rem] leading-tight dark:text-gray-200"
+                                style={{ letterSpacing: "-2.5px" }}
+                            >Become the <span className="text-green-400 dark:text-success">software engineer</span> that companies <span className="text-red-500">love to hire.</span> </p>
                             <div className="flex w-full md:justify-start justify-center items-end">
                                 <div className="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
                                     <label htmlFor="hero-field" className="leading-7 text-sm text-gray-600">Placeholder</label>
@@ -46,7 +56,8 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                            <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" />
+                            {/* <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600" /> */}
+                            <CodeWrite />
                         </div>
                     </div>
                 </Container>
